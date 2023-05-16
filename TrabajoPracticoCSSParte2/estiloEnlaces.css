@@ -1,0 +1,17 @@
+a:link {
+    color: darkgreen;
+    font-weight: bolder;
+}
+a:visited {
+    color: red;
+    font-weight: bolder;
+}
+a:hover {
+    color: red;
+    font-style: italic;
+}
+a:active {
+    color: blue;
+    font-weight: bolder;
+    font-size: 3em;
+}

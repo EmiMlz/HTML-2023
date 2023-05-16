@@ -1,57 +1,114 @@
+<!DOCTYPE html>
 <html>
-    <head> <title>Apuntes Programacion Web Estatica y Laboratorio Web</title></head>
-    <body>
-        <table>
-            <form method="get" action=""> <!-- Agrupa controles para hacer formularios --> <!-- la etiqueta input crea el boton de ingreso de datos-->
-                ingrese texto <input type="text" name="Input de texto" id="Input 1" value="Texto"> <!-- Atributos: size maxLenght-->
-                <br>
-                ingrese texto 2<input type="text" name="Input de texto 2 " id="Input 2" placeholder="Texto 2"> <!-- Atributos: size maxLenght-->
-                <br>
-                Ingrese su Joestar Fav
-                <br>
-                <input type="radio" name="JoestarFav" id="JoestarFav1" value="Jotaro" checked> Jotaro<!-- Atributos: size maxLenght-->
-                <input type="radio" name="JoestarFav" id="JoestarFav2" value="Josuke"> Josuke<!-- Atributos: size maxLenght-->
-                <br>
-                <input type="checkbox"> Soy Mayor de Edad
-                <br>
-                <input type="submit" value="Enviar">
-                <br>   
-                <input type="reset" value="Restablecer">
-                <br>
-                Contanos la historia de tu vida 
-                <textarea name="La historia de tu vida" id="urlifehistory" cols="20" rows="5"></textarea>
-                <br>
-                <br>
-                <br>
-                Elije un color
-                <select name="Elejir un color" id="selectColor">
-                    <option value="rojo"> rojo </option>
-                    <option value="verde"> verde</option>
-                    <option value="amarillo"> amarillo</option>
-                </select>
-            </form>
+<head>
+    <title>Apuntes Programacion Web Estatica y Laboratorio Web</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form method="get" action="">
+                    <label for="Input1">Ingrese texto:</label>
+                    <input type="text" name="Input1" id="Input1" value="Texto" size="20" maxlength="50">
+                    <br>
+                    <label for="Input2">Ingrese texto 2:</label>
+                    <input type="text" name="Input2" id="Input2" placeholder="Texto 2" size="20" maxlength="50">
+                    <br>
+                    Ingrese su Joestar favorito:
+                    <br>
+                    <input type="radio" name="JoestarFav" id="JoestarFav1" value="Jotaro" checked>
+                    <label for="JoestarFav1">Jotaro</label>
+                    <input type="radio" name="JoestarFav" id="JoestarFav2" value="Josuke">
+                    <label for="JoestarFav2">Josuke</label>
+                    <br>
+                    <input type="checkbox" id="MayorDeEdad" name="MayorDeEdad">
+                    <label for="MayorDeEdad">Soy Mayor de Edad</label>
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <br>
+                    <input type="reset" value="Restablecer">
+                    <br>
+                    <label for="HistoriaDeVida">Cuentanos la historia de tu vida:</label>
+                    <textarea name="HistoriaDeVida" id="HistoriaDeVida" cols="20" rows="5"></textarea>
+                    <br>
+                    <label for="SelectColor">Elige un color:</label>
+                    <select name="SelectColor" id="SelectColor">
+                        <option value="Rojo">Rojo</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Amarillo">Amarillo</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
     </table>
-    <div><h2>La entrega del 20 de Abril</h2>
-        La entrega tiene que tener en la primera pagina una caratula con nombre numero de legajo, nombre de la materia, etc
-        Boceto dibujado 
-        Funcionalidad de java script 
-        Se entrega en pedco
-        Parcial 16 17 de Mayo
+    <div>
+        <h2>La entrega del 20 de Abril</h2>
+        <p>La entrega tiene que tener en la primera pagina una caratula con nombre numero de legajo, nombre de la materia, etc.</p>
+        <p>Boceto dibujado.</p>
+        <p>Funcionalidad de JavaScript.</p>
+        <p>Se entrega en pedco.</p>
+        <p>Parcial 16-17 de Mayo.</p>
     </div>
     <div>
         <h2>11/04</h2>
         <h3>IFrames</h3>
         <ul>
-            <li>Frames flotantes</li>
-            atributo src obligatorio toma como valor la direccion url
-            name
+            <li>Frames flotantes.</li>
+            <li>Atributo src obligatorio que toma como valor la direccion url.</li>
+            <li>name.</li>
         </ul>
         <h3>Hola 11 de Abril</h3>
         <iframe src="http://www.uncoma.edu.ar" height="200" width="400">No se pudo</iframe>
-        <iframe width="400" height="200" src="https://www.youtube.com/embed/A6JZ3IWDxOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NCw876mnVEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <audio src=""></audio>
         <video src=""></video>
     </div>
-    </body>
+    <div>  
+        <h2>18/04</h2>
+        <p>CSS = Hojas de estilo en cascada.</p>
+        <p>Tiene tres tipos de caminos diferentes:</p>
+        <table>
+            <tr>
+                <td>Hoja externa</td>
+                <td>Archivo CSS que se vincula al documento HTML a través del elemento &lt;link&gt; y que define los estilos para todas las páginas del sitio web.</td>
+            </tr>
+            <tr>
+                <td>Hoja interna</td>
+                <td>Archivo CSS que se incluye directamente en el documento HTML a través del elemento &lt;style&gt; y que define los estilos para esa página en particular.</td>
+            </tr>
+            <tr>
+                <td>Estilo en línea</td>
+                <td>Estilo CSS que se aplica directamente a un elemento HTML a través del atributo "style".</td>
+            </tr>
+        </table>
+        <p>Los estilos en línea tienen la prioridad más alta y anulan cualquier otro estilo definido a continuación.</p>
+        <p>En segundo lugar, se usan los estilos definidos en hojas de estilo internas (dentro de etiquetas &lt;style&gt; en la sección &lt;head&gt; del documento).</p>
+        <p>Por último, se toman los estilos definidos en un archivo de hojas de estilo externas.</p>
+        <p>Selector universal * y selectores individuales con palabra definida de las etiquetas (por ejemplo p o h1).</p>
+        <p>Para agregar una hoja externa, hay que crear un archivo .css y vincularlo mediante el siguiente código:</p>
+        <code><link rel="stylesheet" href="ejemplo.css" type="text/css"></code>
+    </div>
+    <div>
+        <h2>2/05</h2>
+        Padding: El padding (relleno) es el espacio entre el borde del elemento y su contenido. Se puede ajustar el padding con CSS para crear más o menos espacio entre el contenido y el borde. Cuando se establece padding en un elemento, está añadiendo espacio en el interior de ese elemento.
 
+        Margin: El margin (margen) es el espacio entre el borde del elemento y los elementos circundantes. Puede ajustar los márgenes con CSS para crear más o menos espacio entre los elementos. Cuando se establece un margen en un elemento, está añadiendo espacio alrededor de ese elemento.
+
+        Border: El border (borde) es la línea que rodea el elemento. Se puede personalizar el grosor, el estilo y el color del borde mediante CSS.
+
+        Los div sirven para separar elementos en bloques, se pueden modificar uno a uno por su id.
+        Span es igual que el div pero que no te salta de linea. Para agrupar cosas por lineas y no bloques.
+
+        background dentro de los divs para meter imagenes.
+        backgroundposition para elegir la posicion de la imagen.
+        
+        position es el atributo para el CSS
+        valores:
+        Absoluto, no tiene en cuenta la posicion original del bloques
+        Relativo, se matiene el lugar donde deberia estar el bloque apartado
+        Fixed, es como el absoluto pero no scrollea
+        Sticky, scrollea hasta que dejas de scrollear, o en una posicion definida.
+        Float,hace que se desplace hasta el lugar definido. No se lo toma en cuenta en su lugar original, pero si se desplaza hacia donde deberia manteniendo la altura
+    </div>
+</body>
 </html>

@@ -1,0 +1,12 @@
+:link {
+    color: darkgreen;
+}
+:visited{
+    font: bold;color: red;
+}
+:hover {
+    font-family:Arial, Helvetica, sans-serif;color: red;font: bold;font-size: xx-large;
+}
+:active{
+    color: blue;font: bold;font-size: 10em;
+}

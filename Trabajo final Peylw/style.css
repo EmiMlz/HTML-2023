@@ -1,0 +1,58 @@
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.tituloh1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+}
+.titulo img:first-child {
+    margin-right: 10px;
+    height: 100px;
+}
+body {
+    font:  georgia, sans-serif;
+    font-size: 100%;
+    background-color: burlywood;
+}
+#banner {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+#almohadones {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#alfombras {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#caminos {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+#velas {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+:link {
+    text-decoration: none;
+    color: #555753;
+}
+:active{
+    color: #555753;
+}
+:visited{
+    color: #555753;
+}
+

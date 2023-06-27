@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function recorrer(nodo) {
+            if (nodo.nodeType == 1) {
+                alert(nodo.textContent);
+                nodo.style.color = "gray";
+            }
+            var hijos = nodo.childNodes;
+            for (var i = 0; i < hijos.length; i++) {
+                recorrer(hijos[i]);
+            }
+        }
+        function listar() {
+            var arbol = document.getElementById('ul');
+            recorrer(arbol);
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul">
+        <li>Menu 1</li>
+        <ul>
+            <li>Item 1</li>
+            <ul>
+                <li>Item a</li>
+                <li>Item b</li>
+            </ul>
+            <li>Item 2</li>
+        </ul>
+        <li>Menu 2</li>
+        <ul>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </ul>
+    <button onclick="listar()">listar</button>
+</body>
+</html>

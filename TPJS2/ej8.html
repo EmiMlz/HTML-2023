@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cambiarColorFondo(color) {
+            document.getElementById('lista').style.backgroundColor = color;
+        }
+        function ocultar (idProvincia, nombreProvincia, textoProv) {
+            document.getElementById(idProvincia).style.display = "none";
+            document.getElementById(nombreProvincia).style.textDecoration = "underline";
+            document.getElementById(textoProv).innerHTML = " +";
+        }
+        function mostrarCiudades (idProvincia, nombreProvincia, textoProv) {
+            document.getElementById(idProvincia).style.display = "block";
+            document.getElementById(nombreProvincia).style.textDecoration = "none";
+            document.getElementById(textoProv).innerHTML = " -";
+        }
+    </script>
+    <style>
+        li {
+    cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id = "lista">
+        <li onmouseover="cambiarColorFondo('white')">Blanco</li>
+        <li onmouseover="cambiarColorFondo('black')">Negro</li>
+        <li onmouseover="cambiarColorFondo('blue')">Azul</li>
+        <li onmouseover="cambiarColorFondo('red')">Rojo</li>
+        <li onmouseover="cambiarColorFondo('yellow')">Amarillo</li>
+    </ul>
+    <ul>
+        <li><b id="nqn" onclick="mostrarCiudades('listaNqn','nqn','textNQN')">Neuquén</b><b id="textNQN" onclick="ocultar('listaNqn','nqn','textNQN')"> -</b></li>
+        <ul id="listaNqn">
+            <li>Neuquén</li>
+            <li>Zapala</li>
+            <li>San Martin</li>
+            <li>Junin</li>
+        </ul>
+        <li><b id="rioNegro" onclick="mostrarCiudades('listaRioNegro','rioNegro','textRioNegro')">Rio Negro</b><b id="textRioNegro" onclick="ocultar('listaRioNegro','rioNegro','textRioNegro')"> -</b></li>
+        <ul id="listaRioNegro">
+            <li>Cipolleti</li>
+            <li>Fernandez oro</li>
+            <li>General Roca</li>
+            <li>Cinco saltos</li>
+            <li>Allen</li>
+        </ul>
+        <li><b id="BSAS" onclick="mostrarCiudades('listaBSAS','BSAS','textBSAS')">Buenos Aires</b><b id="textBSAS" onclick="ocultar('listaBSAS','BSAS','textBSAS')"> -</b></li>
+        <ul id="listaBSAS">
+            <li>La Plata</li>
+            <li>Mar del plata</li>
+            <li>Necochea</li>
+        </ul>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+	<script type="text/javascript">
+		const contraseniaDefinitiva = "minombre";
+		var nombre, apellido,dni, nTelefono, contrasenia;
+        nombre = prompt('¿Cuál es tu nombre?');
+		apellido = prompt('¿Cuál es tu apellido?');
+		dni = prompt('¿Cuál es tu número de documento?');
+		nTelefono = prompt('¿Cuál es tu número de teléfono?');
+		do {
+			contrasenia = prompt ('¿Cuál es la contraseña?:')
+            if (contrasenia != contraseniaDefinitiva) {
+                alert('Contraseña incorrecta.');
+            } else {
+                alert('Bienvenido '+ nombre + " " + apellido +'. Sus datos fueron impresos.');
+            }
+		} while (contrasenia != contraseniaDefinitiva)
+		var colDatos;
+		colDatos = [nombre, apellido, dni, nTelefono];
+		for (i in colDatos) {
+			document.write(colDatos[i]+"<br>");
+		}
+	</script>
+</body>
+</html>

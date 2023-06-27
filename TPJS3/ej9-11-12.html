@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrarString() {
+            var textoAModificar;
+            textoAModificar = document.getElementById('texto').value;
+            document.getElementById('resultados').innerHTML += "En mayúscula: " + textoAModificar.toUpperCase() + "<br>";
+            document.getElementById('resultados').innerHTML += "En minúscula: " + textoAModificar.toLowerCase() + "<br>";
+            document.getElementById('resultados').innerHTML += "SubMensaje desde 5 con 10 de longitud: " + textoAModificar.substr(5,10) + "<br>";
+            if (textoAModificar.toLowerCase().includes('hola')) {
+                document.getElementById('resultados').innerHTML += "Hola que tal?<br>";
+            }
+            document.getElementById('resultados').innerHTML += "Sin espacios y sin 'hola': " + textoAModificar.toLowerCase().replace(/\s+/g,'').replace('hola','') + "<br>";
+            document.getElementById('resultados').innerHTML += "Traduciendo palabras: " + textoAModificar.toLowerCase().replace('hola','hello').replace(' mi ',' my ').replace(' bien ', ' fine ') + "<br>";
+        } function calcularEdad (anio) {
+            var edad = new Date().getFullYear() - anio;
+            document.getElementById("div-edad").innerHTML = "Su edad es: " + edad + " años.";
+        } function mostrarMensaje() {
+            var nombre = document.getElementById('nombre-usuario').value;
+            var comentario = document.getElementById('comentario-usuario').value;
+            var fecha = new Date().toString().substr(0,21);
+            if (nombre == '') {
+                document.getElementById('nombre-usuario').style.border = "2px solid red";
+                document.getElementById('nombre-usuario').style.borderRadius = "3px";
+            } else {
+                document.getElementById('nombre-usuario').style.border = "1px solid black";
+                document.getElementById('nombre-usuario').style.borderRadius = "2px";
+            }
+            if (comentario == '') {
+                document.getElementById('comentario-usuario').style.border = "2px solid red";
+                document.getElementById('comentario-usuario').style.borderRadius = "7px";
+            } else {
+                document.getElementById('comentario-usuario').style.border = "1px solid black";
+                document.getElementById('comentario-usuario').style.borderRadius = "6px";
+            }
+            var correcto = (nombre != '' && comentario != '');
+            if (correcto) {
+                document.getElementById('div-mensaje').innerHTML += fecha + " por " + nombre + "<br>" + comentario + "<br>";
+                document.getElementById('comentario-usuario').value = "";
+                document.getElementById('comentario-usuario').focus(); 
+            }
+        }
+    </script>
+</head>
+<body>
+    Ingrese un texto: <input id="texto" type="text"><button onclick="mostrarString()">Mostrar modificaciones</button>
+    <div id="resultados"></div>
+    <div id="div-fecha" >La fecha actual es: </div>
+    <script>
+        var fechaActual = new Date();
+        document.getElementById("div-fecha").innerHTML += fechaActual + "<br>";
+    </script>
+    <button onclick="anio = prompt('¿En que año naciste?'); calcularEdad(anio)">Calcular edad</button>
+    <div id="div-edad"></div>
+    <form onsubmit="return false">
+        Nombre de usuario: <input id="nombre-usuario" type="text"><br>
+        <textarea id="comentario-usuario" cols="60" rows="7" style="resize: none;"></textarea><br>
+        <button onclick="mostrarMensaje()">Enviar mensaje</button>
+    </form>
+    <div id="div-mensaje"></div>
+</body>
+</html>

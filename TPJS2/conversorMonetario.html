@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrar(resultado) {
+            if (resultado == -1) {
+                document.getElementById("resultados").innerHTML = "Error";
+            } else {
+                document.getElementById("resultados").innerHTML = resultado;
+            }
+        }
+        function convertir(num) {
+            var desde, hasta, r;
+            r = -1;
+            desde = document.getElementById("desde").value;
+            hasta = document.getElementById("hasta").value;
+            if (desde == "Pesos") {
+                if (hasta == "Dolares") {
+                    r = num / 243;
+                } else if (hasta == "Reales") {
+                    r = num / 49;
+                } else if (hasta == "Euros") {
+                    r = num / 261;
+                } else {
+                    r = num;
+                }
+            } else if (desde == "Dolares") {
+                if (hasta == "Pesos") {
+                    r = num * 243;
+                } else if (hasta == "Reales") {
+                    r = num * 4.92;
+                } else if (hasta == "Euros") {
+                    r = num / 1.07;
+                } else {
+                    r = num;
+                }
+            } else if (desde == "Reales") {
+                if (hasta == "Pesos") {
+                    r = num * 49;
+                } else if (hasta == "Dolares") {
+                    r = num / 4.92;
+                } else if (hasta == "Euros") {
+                    r = num / 5.26;
+                } else {
+                    r = num;
+                }
+            } else if (desde == "Euros") {
+                if (hasta == "Pesos") {
+                    r = num * 261;
+                } else if (hasta == "Dolares") {
+                    r = num * 1.07;
+                } else if (hasta == "Reales") {
+                    r = num * 5.26;
+                } else {
+                    r = num;
+                }
+            }
+            return r;
+        }
+    </script>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p>Convertir desde: </p>
+    <select id="desde">
+        <option value="Pesos">Pesos</option>
+        <option value="Dolares">Dolares</option>
+        <option value="Reales">Reales</option>
+        <option value="Euros">Euros</option>
+    </select>
+    <p>a: </p>
+    <select id="hasta">
+        <option value="Pesos">Pesos</option>
+        <option value="Dolares">Dolares</option>
+        <option value="Reales">Reales</option>
+        <option value="Euros">Euros</option>
+    </select>
+    <button onclick="x = prompt('Ingrese la cantidad a convertir: ') ;r = convertir(x); mostrar(r)">Convertir</button>
+    <p>Resultado: </p>
+    <p id="resultados"></p>
+</body>
+</html>

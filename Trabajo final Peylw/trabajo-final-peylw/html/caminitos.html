@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Trabajo final Peylw/Styles/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript">
+        window.onload = function () {
+                document.getElementById("main-link-caminos").style.textDecoration = "underline";
+                document.getElementById("main-link-caminos").style.textDecorationColor = "#FF4E00";
+        };
+    </script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container-flex">
+            <div class="main-header-container">
+                <h1 class="main-header-title">INSPIRA DECO</h1>
+                <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="main.html" class="menu-link" id="main-link-home">HOME</a></li>
+                        <li class="menu-item"><a href="aboutus.html" class="menu-link"
+                                id="main-link-aboutus">Sobre Nosotros</a></li>
+                        <li class="menu-item"><a href="velas.html" class="menu-link" id="main-link-velas">Velas</a></li>
+                        <li class="menu-item"><a href="caminitos.html" class="menu-link"
+                                id="main-link-caminos">Caminos</a></li>
+                        <li class="menu-item"><a href="almohadones.html" class="menu-link"
+                                id="main-link-almohadon">Almohadon</a></li>
+                        <li class="menu-item"><a href="alfombras.html" class="menu-link"
+                                id="main-link-alfombra">Alfombra</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-header-container">
+                <div class="main-header-container-contactus">
+                    <a href="contactus.html" class="menu-link">
+                        <span class="main-header-txt">Necesitas Ayuda?</span>
+                        <p class="main-header-txt"><i class="fas fa-phone"></i> Contactanos</p>
+                    </a>
+                </div>
+            </div>
+            <div class="main-header-container">
+                <img src="/Trabajo final Peylw/imagenes/Logo Trasparente.png" alt="Logo Trasparente"
+                    class="main-header-img">
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        
+        <div class="container">
+            <div class="container-title-products">
+                <h2 class="main-title">Caminitos</h2>
+
+                <section class="container-products">
+                    <div class="product hot">
+                        <img src="/Trabajo final Peylw/caminitos/caminito azul pero mas cool.jpg" alt="" class="product-img">
+                        <div class="product-description">
+                            <h3 class="product-title">Caminito Azul</h3>
+                            <span class="product-price">$2200.00</span>
+                            <button class="btn-shop"><i class="fas fa-cart-plus"></i><span
+                                    class="btn-txt">Añadir</span></button>
+                        </div>
+                    </div>
+
+                    <div class="product hot">
+                        <img src="/Trabajo final Peylw/caminitos/caminito rosa.JPG" alt="" class="product-img">
+                        <div class="product-description">
+                            <h3 class="product-title">Vela Pilar</h3>
+                            <span class="product-price">$1200.00</span>
+                            <button class="btn-shop"><i class="fas fa-cart-plus"></i><span
+                                    class="btn-txt">Añadir</span></button>
+                        </div>
+                    </div>
+
+                    <div class="product hot">
+                        <img src="/Trabajo final Peylw/caminitos/caminito plata con bordados.jpeg" alt="" class="product-img">
+                        <div class="product-description">
+                            <h3 class="product-title">Caminito Lana con Bordado</h3>
+                            <span class="product-price">$3000.00</span>
+                            <button class="btn-shop"><i class="fas fa-cart-plus"></i><span
+                                    class="btn-txt">Añadir</span></button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="/Trabajo final Peylw/caminitos/caminito plata con flecos.JPG" alt="" class="product-img">
+                        <div class="product-description">
+                            <h3 class="product-title">Caminito Crudo</h3>
+                            <span class="product-price">$2800.00</span>
+                            <button class="btn-shop"><i class="fas fa-cart-plus"></i><span
+                                    class="btn-txt">Añadir</span></button>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="/Trabajo final Peylw/caminitos/caminito azul petroleo.JPG" alt="" class="product-img">
+                        <div class="product-description">
+                            <h3 class="product-title">Caminito Azul Petroleo</h3>
+                            <span class="product-price">$2000.00</span>
+                            <button class="btn-shop"><i class="fas fa-cart-plus"></i><span
+                                    class="btn-txt">Añadir</span></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="cart-container">
+                <h2>Carrito de Compras</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <button class="cart-btn" id="cart-btn-clear">Borrar Carrito</button>
+            </div>
+        </div>
+
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h2 class="footer-title">Sobre Nosotros</h2>
+            <p class="footer-txt">Bienvenidos a nuestra tienda/showroom donde exhibimos con orgullo nuestros productos
+                100 % propios y ecologicos.
+                <!-- </p> 
+            <p class="footer-txt"> En Inspira Decos, nos apasiona crear decoraciones textiles hermosas y sostenibles que mejoren sus espacios vitales. Cada producto esta cuidadosamente elaborado por nuestras habiles manos que ponen su corazon y alma en cada puntada y detalle.
+            </p>
+            <p class="footer-txt">
+            Nuestro compromiso con el medio ambiente nos impulsa a utilizar materiales y métodos de producción ecológicos. Nos esforzamos por minimizar nuestra huella ecológica al tiempo que ofrecemos una calidad y un estilo excepcionales
+            </p>   
+            <p class="footer-txt">Explore nuestra gama de productos, incluidos almohadones hechos a mano, alfombras exquisitas, velas encantadoras y hermosos caminos de mesa. Cada pieza tiene un diseño único para añadir calidez, comodidad y un toque de elegancia a su hogar.</p>
+
+            <p class="footer-txt">Ya sea que esté buscando transformar su living, dormitorio o cualquier otro espacio, estamos aca para inspirarlos con nuestras creaciones.</p>
+
+            <p class="footer-txt">Gracias por elegir Inspira Deco, donde la ecología se combina con una artesanía excepcional. Esperamos poder ayudarlo a crear un hogar hermoso y ecológico.</p> -->
+        </div>
+        <div class="footer-section">
+            <h2 class="footer-title">Ubicaci&oacute;n</h2>
+            <p class="footer-txt">Argentina, Rio Negro, Cipolletti. Pida la direccion y horario del showroom por
+                nuestras redes sociales</p>
+            <h2 class="footer-title">Contactenos</h2>
+            <p class="footer-txt">Telefono: +542994235011</p>
+            <p class="footer-txt">E-Mail: inspira-deco@gmail.com</p>
+            <a href="https://www.instagram.com/inspiradeco_/" class="footer-favicon"><i class="fa-brands fa-instagram" style="color: #fafcff;"></i></a>
+            <a href="https://www.facebook.com/inspiradecco" class="footer-favicon"><i class="fa-brands fa-facebook" style="color: #fafcff;"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5492996917312&text=Hola,%20cual%20es%20el%20catalogo?" class="footer-favicon"><i class="fa-brands fa-whatsapp" style="color: #fafcff;"></i></a>
+        </div>
+        <div class="footer-section">
+            <h2 class="footer-title">Quick Links</h2>
+            <p class="footer-txt"><a class="footer-link" href="main.html" class="footer-link">home</a>
+            </p>
+            <p class="footer-txt"> <a class="footer-link" href="aboutus.html" class="footer-link">Sobre Nosotros</a></p>
+            <p class="footer-txt"> <a class="footer-link" href="contactus.html" class="footer-link">Contactanos</a></p>
+
+        </div>
+        <p class="copy">© 2023 Inspira Deco. All Rights Reserverd | Design By Emiliano Lopez FAI-3357</p>
+    </footer>
+    <script src="/Trabajo final Peylw/slider.js"></script>
+    <script src="/Trabajo final Peylw/menu.js"></script>
+    <script src="/Trabajo final Peylw/carrito.js"></script>
+</body>
+
+</html>
